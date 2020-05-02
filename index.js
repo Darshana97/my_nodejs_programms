@@ -53,6 +53,11 @@ app.get("/post", (req, res) => {
 //   res.sendFile(path.resolve(__dirname, "pages/contact.html"));
 // });
 
+//Post new
+app.get("/posts/new", (req, res) => {
+  res.render("create");
+});
+
 app.get("/contact", (req, res) => {
   res.render("contact");
 });
@@ -62,3 +67,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server started at port ${PORT}`);
 });
+
+
+
+
