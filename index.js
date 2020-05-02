@@ -3,11 +3,15 @@ const path = require("path");
 const expressEdge = require("express-edge");
 
 const express = require("express");
-// const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 
 const app = express();
 
-// app.use(bodyParser.urlencoded({ extended: true }));
+mongoose.connect("mongodb://localhost:27017/NodeBlog", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 app.use(express.static("public"));
 app.use(expressEdge);
 
