@@ -11,17 +11,30 @@ const app = express();
 app.use(express.static("public"));
 app.use(expressEdge);
 
-
-
 app.set("views", `${__dirname}/views`);
+
+//Home page
+
+// app.get("/", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "pages/index.html"));
+// });
 
 app.get("/", (req, res) => {
   res.render("index");
 });
 
+//About page
+
+// app.get("/about", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "pages/about.html"));
+// });
+
 app.get("/about", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "pages/about.html"));
+  res.render("about");
 });
+
+
+//
 
 app.get("/post", (req, res) => {
   res.sendFile(path.resolve(__dirname, "pages/post.html"));
