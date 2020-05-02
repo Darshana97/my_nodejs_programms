@@ -7,13 +7,17 @@ mongoose.connect("mongodb://localhost:27017/NodeBlog_test", {
   useUnifiedTopology: true,
 });
 
-Post.save(
-  {
-    title: "My first blog post.",
-    description: "Blog post description",
-    content: "Lorem ipsum content",
-  },
-  (error, post) => {
-    console.log(error, post);
-  }
-);
+// Post.save(
+//   {
+//     title: "My first blog post.",
+//     description: "Blog post description",
+//     content: "Lorem ipsum content",
+//   },
+//   (error, post) => {
+//     console.log(error, post);
+//   }
+// );
+
+Post.find({}, (error, posts) => {
+  console.log(error, posts);
+});
