@@ -44,10 +44,13 @@ app.get("/post", (req, res) => {
   res.render("post");
 });
 
-
+//Contact page
+// app.get("/contact", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "pages/contact.html"));
+// });
 
 app.get("/contact", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "pages/contact.html"));
+  res.render("contact");
 });
 
 const PORT = process.env.PORT || 5000;
