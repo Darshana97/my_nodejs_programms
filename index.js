@@ -19,6 +19,7 @@ app.set("views", `${__dirname}/views`);
 //   res.sendFile(path.resolve(__dirname, "pages/index.html"));
 // });
 
+//template engine home page
 app.get("/", (req, res) => {
   res.render("index");
 });
